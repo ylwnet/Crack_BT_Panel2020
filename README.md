@@ -18,6 +18,7 @@ wget --no-check-certificate -qO crack_bt_panel_pro.sh https://git.io/JvkjT && ba
 卸载
 wget --no-check-certificate -qO uninstall.sh https://git.io/JvkjI && bash uninstall.sh
 
+
 更新日志
 Nginx 安装器 openssl 主线版本已升级至 1.1.1d 和 1.0.2t；
 提供卸载功能；

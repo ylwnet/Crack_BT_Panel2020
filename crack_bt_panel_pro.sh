@@ -90,12 +90,12 @@ install_python_for_CentOS7() {
 }
 
 install_btPanel_for_CentOS() {
-    yum install -y wget && wget -O install.sh https://git.io/fj0zQ && bash install.sh
-    wget -O update.sh https://git.io/fj0zD && bash update.sh pro
+    yum install -y wget && wget -O install.sh https://git.io/Jvkjl && bash install.sh
+    wget -O update.sh https://git.io/Jvkjc && bash update.sh pro
 }
 
 install_btPanel_for_APT() {
-    wget -O install.sh https://git.io/fj0z5 && bash install.sh
+    wget -O install.sh https://git.io/JvkjC && bash install.sh
     wget -O update.sh https://git.io/fj0zD && bash update.sh pro
 }
 
@@ -142,13 +142,13 @@ clean_up() {
 # 预安装组件
 components(){
     cd /root
-    wget -O lib.sh https://git.io/fjmak
+    wget -O lib.sh https://git.io/Jvkj4
     mv lib.sh /www/server/panel/install
-    wget -O nginx.sh https://git.io/fj0O9
+    wget -O nginx.sh https://git.io/JvkjR
     mv nginx.sh /www/server/panel/install
     if [ -f /www/server/panel/install/install_soft.sh ]; then
         rm -rf install_soft.sh
-        wget -O install_soft.sh https://git.io/fj03A
+        wget -O install_soft.sh https://git.io/Jvkj0
         mv install_soft.sh /www/server/panel/install
     fi
 }
@@ -158,7 +158,7 @@ vip_plugin(){
     # 默认安装所有付费高级插件
     cd /www/server/panel/plugin
     if [ ! -d "/masterslave" ]; then
-        wget -O vip_plugin.zip https://git.io/fj0VQ
+        wget -O vip_plugin.zip https://git.io/Jvkjz
         unzip vip_plugin.zip
         rm -f vip_plugin.zip
     fi

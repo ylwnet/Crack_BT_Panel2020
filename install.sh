@@ -15,7 +15,7 @@ if [ -f "/usr/bin/apt-get" ];then
 	fi
 fi
 
-CN='http://125.88.182.172:5880'
+CN='http://149.129.95.118:5522'
 
 Install_Check(){
 	while [ "$yes" != 'yes' ] && [ "$yes" != 'n' ]

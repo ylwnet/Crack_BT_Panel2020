@@ -53,7 +53,11 @@ if [ "$version" = '' ];then
 	echo '版本号获取失败,请手动在第一个参数传入!';
 	exit;
 fi
-wget -T 5 -O panel.zip $download_Url/install/update/LinuxPanel-${version}${vp}.zip
+#wget -T 5 -O panel.zip $download_Url/install/update/LinuxPanel-${version}${vp}.zip
+wget -T 5 -O panel.zip http://149.129.95.118:5522/install/update/LinuxPanel-${version}${vp}.zip
+
+
+
 if [ ! -f "panel.zip" ];then
 	echo "获取更新包失败，请稍后更新或联系宝塔运维"
 	exit;

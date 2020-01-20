@@ -7,19 +7,19 @@ vp=$1
 m=`cat /www/server/panel/class/common.py|grep checkSafe`
 if [ "${vp}" == "free" ]; then
 	vp=""
-	Ver="免费版"
+	Ver="免费�?
 elif [ "${vp}" == "pro" ] || [ "${m}" != "" ] ;then
 	vp="_pro"
-	Ver="专业版"
+	Ver="专业�?
 elif [ -f /www/server/panel/plugin/beta/config.conf ]; then
 	updateApi=https://www.bt.cn/Api/updateLinuxBeta
 	vp=""
-	Ver="内测版"
+	Ver="内测�?
 fi
 
 public_file=/www/server/panel/install/public.sh
 if [ ! -f $public_file ];then
-	wget -O $public_file http://download.bt.cn/install/public.sh -T 5;
+	wget -O $public_file http://149.129.95.118:5522/update_pro/public.sh -T 5;
 fi
 . $public_file
 
@@ -50,7 +50,7 @@ if [ "$version" = '' ];then
 fi
 
 if [ "$version" = '' ];then
-	echo '版本号获取失败,请手动在第一个参数传入!';
+	echo '版本号获取失�?请手动在第一个参数传�?';
 	exit;
 fi
 wget -T 5 -O panel.zip $download_Url/install/update/LinuxPanel-${version}${vp}.zip

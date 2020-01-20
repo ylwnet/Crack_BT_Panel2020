@@ -7,14 +7,14 @@ vp=$1
 m=`cat /www/server/panel/class/common.py|grep checkSafe`
 if [ "${vp}" == "free" ]; then
 	vp=""
-	Ver="鍏嶈垂鐗?
+	Ver="免费版"
 elif [ "${vp}" == "pro" ] || [ "${m}" != "" ] ;then
 	vp="_pro"
-	Ver="涓撲笟鐗?
+	Ver="专业版"
 elif [ -f /www/server/panel/plugin/beta/config.conf ]; then
 	updateApi=https://www.bt.cn/Api/updateLinuxBeta
 	vp=""
-	Ver="鍐呮祴鐗?
+	Ver="内测版"
 fi
 
 public_file=/www/server/panel/install/public.sh
@@ -50,12 +50,12 @@ if [ "$version" = '' ];then
 fi
 
 if [ "$version" = '' ];then
-	echo '鐗堟湰鍙疯幏鍙栧け璐?璇锋墜鍔ㄥ湪绗竴涓弬鏁颁紶鍏?';
+	echo '版本号获取失败,请手动在第一个参数传入!';
 	exit;
 fi
 wget -T 5 -O panel.zip $download_Url/install/update/LinuxPanel-${version}${vp}.zip
 if [ ! -f "panel.zip" ];then
-	echo "鑾峰彇鏇存柊鍖呭け璐ワ紝璇风◢鍚庢洿鏂版垨鑱旂郴瀹濆杩愮淮"
+	echo "获取更新包失败，请稍后更新或联系宝塔运维"
 	exit;
 fi
 unzip -o panel.zip -d $setup_path/server/ > /dev/null
@@ -77,4 +77,4 @@ python tools.py o
 
 sleep 1 && service bt restart > /dev/null 2>&1 &
 echo "====================================="
-echo "宸叉垚鍔熷崌绾у埌[$version]${Ver}";
+echo "已成功升级到[$version]${Ver}";

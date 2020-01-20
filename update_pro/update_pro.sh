@@ -7,14 +7,14 @@ vp=$1
 m=`cat /www/server/panel/class/common.py|grep checkSafe`
 if [ "${vp}" == "free" ]; then
 	vp=""
-	Ver="Ãâ·Ñ°æ"
+	Ver="å…è´¹ç‰ˆ"
 elif [ "${vp}" == "pro" ] || [ "${m}" != "" ] ;then
 	vp="_pro"
-	Ver="×¨Òµ°æ"
+	Ver="ä¸“ä¸šç‰ˆ"
 elif [ -f /www/server/panel/plugin/beta/config.conf ]; then
 	updateApi=https://www.bt.cn/Api/updateLinuxBeta
 	vp=""
-	Ver="ÄÚ²â°æ"
+	Ver="å†…æµ‹ç‰ˆ"
 fi
 
 public_file=/www/server/panel/install/public.sh
@@ -50,12 +50,12 @@ if [ "$version" = '' ];then
 fi
 
 if [ "$version" = '' ];then
-	echo '°æ±¾ºÅ»ñÈ¡Ê§°Ü,ÇëÊÖ¶¯ÔÚµÚÒ»¸ö²ÎÊı´«Èë!';
+	echo 'ç‰ˆæœ¬å·è·å–å¤±è´¥,è¯·æ‰‹åŠ¨åœ¨ç¬¬ä¸€ä¸ªå‚æ•°ä¼ å…¥!';
 	exit;
 fi
 wget -T 5 -O panel.zip $download_Url/install/update/LinuxPanel-${version}${vp}.zip
 if [ ! -f "panel.zip" ];then
-	echo "»ñÈ¡¸üĞÂ°üÊ§°Ü£¬ÇëÉÔºó¸üĞÂ»òÁªÏµ±¦ËşÔËÎ¬"
+	echo "è·å–æ›´æ–°åŒ…å¤±è´¥ï¼Œè¯·ç¨åæ›´æ–°æˆ–è”ç³»å®å¡”è¿ç»´"
 	exit;
 fi
 unzip -o panel.zip -d $setup_path/server/ > /dev/null
@@ -77,4 +77,4 @@ python tools.py o
 
 sleep 1 && service bt restart > /dev/null 2>&1 &
 echo "====================================="
-echo "ÒÑ³É¹¦Éı¼¶µ½[$version]${Ver}";
+echo "å·²æˆåŠŸå‡çº§åˆ°[$version]${Ver}";

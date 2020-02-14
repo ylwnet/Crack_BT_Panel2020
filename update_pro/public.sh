@@ -5,7 +5,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en
 
 get_node_url(){
-	nodes=(http://149.129.95.118:5522);
+	nodes=(http://git.efe.cc:5522);
 	#nodes=(http://183.235.223.101:3389 http://125.88.182.172:5880 http://103.224.251.67 http://119.188.210.21:5880 http://download.bt.cn http://45.32.116.160 http://128.1.164.196);
 
 

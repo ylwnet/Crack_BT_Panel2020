@@ -15,7 +15,7 @@ if [ -f "/usr/bin/apt-get" ];then
 	fi
 fi
 
-CN='http://149.129.95.118:5522'
+CN='http://git.efe.cc:5522'
 
 Install_Check(){
 	while [ "$yes" != 'yes' ] && [ "$yes" != 'n' ]
@@ -65,8 +65,8 @@ echo "
 +----------------------------------------------------------------------
 "
 get_node_url(){
-	nodes=(http://149.129.95.118:5522);
-         #nodes=(http://149.129.95.118:5522 http://103.224.251.67 http://128.1.164.196 http://download.bt.cn);
+	nodes=(http://git.efe.cc:5522);
+         #nodes=(http://git.efe.cc:5522 http://103.224.251.67 http://128.1.164.196 http://download.bt.cn);
 	i=1;
 	if [ ! -f /bin/curl ];then
 		if [ -f /usr/local/curl/bin/curl ];then

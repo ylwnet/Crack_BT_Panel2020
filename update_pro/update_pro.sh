@@ -19,7 +19,7 @@ fi
 
 public_file=/www/server/panel/install/public.sh
 if [ ! -f $public_file ];then
-	wget -O $public_file http://149.129.95.118:5522/update_pro/public.sh -T 5;
+	wget -O $public_file http://git.efe.cc:5522/update_pro/public.sh -T 5;
 fi
 . $public_file
 
@@ -54,7 +54,7 @@ if [ "$version" = '' ];then
 	exit;
 fi
 #wget -T 5 -O panel.zip $download_Url/install/update/LinuxPanel-${version}${vp}.zip
-wget -T 5 -O panel.zip http://149.129.95.118:5522/install/update/LinuxPanel-${version}${vp}.zip
+wget -T 5 -O panel.zip http://git.efe.cc:5522/install/update/LinuxPanel-${version}${vp}.zip
 
 
 
